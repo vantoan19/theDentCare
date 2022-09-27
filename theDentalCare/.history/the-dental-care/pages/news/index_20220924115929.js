@@ -1,0 +1,82 @@
+import { Fragment } from "react";
+import styled from "styled-components";
+import NavBar from "../../components/NavBar/NavBar";
+import BackgroundImage from "../../components/BackgroundImage/BackgroundImage";
+import Card from "../../components/UI/Card/Card";
+
+const NewsHeader = styled.h2``;
+
+const NewsImage = styled.img`
+  grid-area: img;
+`;
+
+const NewsTitle = styled.h3`
+  grid-area: title;
+`;
+
+const NewsDesc = styled.p`
+  grid-area: desc;
+`;
+
+const NewsCard = styled(Card)`
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas:
+    "img" "title"
+    "img" "desc";
+  grid-gap: 1rem;
+`;
+
+const NewsColumn = styled.div``;
+
+const NewsContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+`;
+
+const PageContainer = styled.div`
+  position: relative;
+`;
+
+const news = [
+  {
+    img_src:
+      "https://cdn.tuoitre.vn/thumb_w/586/2019/10/5/dnah-rang-1570235681779771597111-15702357680691634761054.png",
+    title: "Bác sĩ cảnh báo không nên đánh răng với muối hoặc baking soda",
+    desc: "TTO - Về hóa học, baking soda là chất tẩy rửa. Dùng baking soda tẩy trắng răng sẽ khiến men răng bị mòn dần và nhanh vàng ố hơn...",
+    href: "https://tuoitre.vn/bac-si-canh-bao-khong-nen-danh-rang-voi-muoi-hoac-baking-soda-20191005073751713.htm",
+  },
+  {
+    img_src:
+      "https://cdn.tuoitre.vn/2018/12/10/32372563-man-no-smoking-concept-a-no-smoking-sign-15444152333141733074826.jpg",
+    title: "10 nguyên nhân khiến hơi thở của bạn bốc mùi",
+    desc: "TTO - Ăn thực phẩm có mùi, chăm sóc răng miệng kém, uống cà phê hoặc mang bệnh sẽ khiến hơi thở của bạn trở nên hôi, ảnh...",
+    href: "https://tuoitre.vn/10-nguyen-nhan-khien-hoi-tho-cua-ban-boc-mui-20181210093814671.htm",
+  },
+  {
+    img_src:
+      "https://cdn.tuoitre.vn/thumb_w/640/2018/6/29/photo-1-15302574975561893688399.jpg",
+    title: "10 nguyên nhân khiến hơi thở của bạn bốc mùi",
+    desc: "TTO - Ăn thực phẩm có mùi, chăm sóc răng miệng kém, uống cà phê hoặc mang bệnh sẽ khiến hơi thở của bạn trở nên hôi, ảnh...",
+    href: "https://tuoitre.vn/10-nguyen-nhan-khien-hoi-tho-cua-ban-boc-mui-20181210093814671.htm",
+  },
+];
+
+export default function News() {
+  return (
+    <Fragment>
+      <NavBar />
+      <PageContainer>
+        <BackgroundImage
+          src="/contact_image.jpeg"
+          alt="news background image"
+          isMasked
+        />
+        <NewsContainer>
+          <NewsHeader>Tin tức</NewsHeader>
+        </NewsContainer>
+      </PageContainer>
+    </Fragment>
+  );
+}

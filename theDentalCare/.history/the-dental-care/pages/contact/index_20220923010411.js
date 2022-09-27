@@ -1,0 +1,29 @@
+import { Fragment } from "react";
+import styled from "styled-components";
+import NavBar from "../../components/NavBar/NavBar";
+import BackgroundImage from "../../components/BackgroundImage/BackgroundImage";
+
+const ContactTextInput = styled.input``;
+
+const ContactTextArea = styled.textarea``;
+
+const ContactForm = styled.form``;
+
+const InfoTitle = styled.h3``;
+
+const ContactContainer = styled.div``;
+
+export default function Contact() {
+  return (
+    <Fragment>
+      <NavBar />
+      <ContactContainer>
+        <BackgroundImage
+          src="/contact_image.jpeg"
+          alt="contact background image"
+          isMasked={true}
+        />
+      </ContactContainer>
+    </Fragment>
+  );
+}
